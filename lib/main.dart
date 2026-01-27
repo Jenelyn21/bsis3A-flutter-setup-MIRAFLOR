@@ -55,6 +55,12 @@ class _QuizWidgetState extends State<QuizWidget> {
       'answers': ['Corporate External Operator', 'Chief Executive Officer', 'Central Equity Office', 'Chief Energy Officer'],
       'correctAnswer': 1,
     },
+
+    {
+      'question': 'What is the main goal of Human Resources (HR) in a business??',
+      'answers': ['To manage company finances', 'To repair office machinery', 'To design new products', 'To manage and support employees'],
+      'correctAnswer': 3,
+    },
     
   ];
 
