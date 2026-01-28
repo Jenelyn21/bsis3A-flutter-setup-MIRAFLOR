@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFFB4A5E8),
+          seedColor: const Color.fromARGB(255, 107, 86, 184),
           brightness: Brightness.light,
         ),
         fontFamily: 'SF Pro Display',
@@ -109,7 +109,7 @@ class _QuizWidgetState extends State<QuizWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFFFD4E5),
+      backgroundColor: const Color.fromARGB(255, 240, 180, 204),
       body: SafeArea(
         child: !quizStarted && currentQuestionIndex == 0 && score == 0
             ? buildStartView()
@@ -127,26 +127,14 @@ class _QuizWidgetState extends State<QuizWidget> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              width: 120,
-              height: 120,
-              decoration: BoxDecoration(
-                color: const Color(0xFFE8DEFC),
-                shape: BoxShape.circle,
-              ),
-              child: const Icon(
-                Icons.quiz_outlined,
-                size: 60,
-                color: Color(0xFFB4A5E8),
-              ),
-            ),
+            
             const SizedBox(height: 40),
             const Text(
               'Ready to test your\nknowledge?',
               style: TextStyle(
                 fontSize: 32,
                 fontWeight: FontWeight.bold,
-                color: Color(0xFF6B5B7C),
+                color: Color.fromARGB(255, 120, 76, 166),
                 height: 1.2,
               ),
               textAlign: TextAlign.center,
@@ -156,7 +144,7 @@ class _QuizWidgetState extends State<QuizWidget> {
               '${questions.length} questions await you',
               style: const TextStyle(
                 fontSize: 16,
-                color: Color(0xFF9B8BA8),
+                color: Color.fromARGB(255, 12, 6, 18),
               ),
             ),
             const SizedBox(height: 60),
@@ -166,7 +154,7 @@ class _QuizWidgetState extends State<QuizWidget> {
               child: ElevatedButton(
                 onPressed: startQuiz,
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFFB4A5E8),
+                  backgroundColor: const Color.fromARGB(255, 235, 57, 196),
                   foregroundColor: Colors.white,
                   elevation: 0,
                   shape: RoundedRectangleBorder(
@@ -207,7 +195,7 @@ class _QuizWidgetState extends State<QuizWidget> {
                     style: const TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w600,
-                      color: Color(0xFF9B8BA8),
+                      color: Color.fromARGB(255, 160, 80, 225),
                     ),
                   ),
                   Text(
@@ -215,7 +203,7 @@ class _QuizWidgetState extends State<QuizWidget> {
                     style: const TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w600,
-                      color: Color(0xFFB4A5E8),
+                      color: Color.fromARGB(255, 29, 20, 61),
                     ),
                   ),
                 ],
@@ -225,8 +213,8 @@ class _QuizWidgetState extends State<QuizWidget> {
                 borderRadius: BorderRadius.circular(10),
                 child: LinearProgressIndicator(
                   value: progress,
-                  backgroundColor: const Color(0xFFE8DEFC),
-                  color: const Color(0xFFB4A5E8),
+                  backgroundColor: const Color.fromARGB(255, 220, 208, 243),
+                  color: const Color.fromARGB(255, 41, 28, 90),
                   minHeight: 8,
                 ),
               ),
@@ -249,14 +237,14 @@ class _QuizWidgetState extends State<QuizWidget> {
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
                       colors: [
-                        Color(0xFFFFF8F3),
-                        Color(0xFFFFF3F8),
+                        Color.fromARGB(255, 255, 243, 251),
+                        Color.fromARGB(255, 255, 243, 251),
                       ],
                     ),
                     borderRadius: BorderRadius.circular(20),
                     boxShadow: [
                       BoxShadow(
-                        color: const Color(0xFFB4A5E8).withOpacity(0.1),
+                        color: const Color.fromARGB(255, 234, 233, 238).withOpacity(0.1),
                         blurRadius: 20,
                         offset: const Offset(0, 4),
                       ),
@@ -267,7 +255,7 @@ class _QuizWidgetState extends State<QuizWidget> {
                     style: const TextStyle(
                       fontSize: 22,
                       fontWeight: FontWeight.w600,
-                      color: Color(0xFF6B5B7C),
+                      color: Color.fromARGB(255, 22, 1, 43),
                       height: 1.4,
                     ),
                     textAlign: TextAlign.center,
@@ -285,11 +273,11 @@ class _QuizWidgetState extends State<QuizWidget> {
 
                     Color getColor() {
                       if (!showResult) {
-                        return isSelected ? const Color(0xFFE8DEFC) : const Color(0xFFFFF8F3);
+                        return isSelected ? const Color.fromARGB(255, 185, 157, 243) : const Color(0xFFFFF8F3);
                       }
-                      if (isCorrect) return const Color(0xFFD4F4DD);
-                      if (isSelected && !isCorrect) return const Color(0xFFFFDFDF);
-                      return const Color(0xFFFFF8F3);
+                      if (isCorrect) return const Color.fromARGB(255, 162, 224, 179);
+                      if (isSelected && !isCorrect) return const Color.fromARGB(255, 228, 168, 168);
+                      return const Color.fromARGB(255, 235, 225, 217);
                     }
 
                     Color getBorderColor() {
@@ -371,7 +359,7 @@ class _QuizWidgetState extends State<QuizWidget> {
                     child: ElevatedButton(
                       onPressed: nextQuestion,
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xFFB4A5E8),
+                        backgroundColor: const Color.fromARGB(255, 183, 166, 245),
                         foregroundColor: Colors.white,
                         elevation: 0,
                         shape: RoundedRectangleBorder(
