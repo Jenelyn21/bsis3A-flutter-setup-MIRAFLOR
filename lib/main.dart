@@ -61,6 +61,12 @@ class _QuizWidgetState extends State<QuizWidget> {
       'answers': ['To manage company finances', 'To repair office machinery', 'To design new products', 'To manage and support employees'],
       'correctAnswer': 3,
     },
+
+    {
+      'question': 'What is the main purpose of a business?',
+      'answers': ['To make friends', 'To earn profit', 'To play games', 'To avoid competition'],
+      'correctAnswer': 1,
+    },
     
   ];
 
